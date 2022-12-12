@@ -6,7 +6,7 @@ import FeedbackDetails from './FeedbackDetails';
 
 const ManageFeedbacks = () => {
 
-    const feedback = () => axios.get('https://bank-of-bd.herokuapp.com/feedbacks');
+    const feedback = () => axios.get('https://online-bank-of-bd-server-production.up.railway.app/feedbacks');
 
         const {isLoading, data, refetch} = useQuery(["feedbacks"], feedback);
 

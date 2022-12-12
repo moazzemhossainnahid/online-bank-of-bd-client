@@ -12,7 +12,7 @@ const UseToken = (user) => {
             joiningDate: date
         }
         if(email){
-            fetch(`https://bank-of-bd.herokuapp.com/user/${email}`, {
+            fetch(`https://online-bank-of-bd-server-production.up.railway.app/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -28,7 +28,7 @@ const Profile = () => {
   let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
   const email = user?.email
   useEffect(() => {
-    fetch(`https://bank-of-bd.herokuapp.com/profile/${email}`)
+    fetch(`https://online-bank-of-bd-server-production.up.railway.app/profile/${email}`)
       .then(res => {
         if (!res.status === 200) {
           toast.error("Profile Not Found!")
@@ -74,7 +74,7 @@ const Profile = () => {
       .then(result => {
         if (result.data?.url) {
           const url = result?.data?.url;
-          fetch(`https://bank-of-bd.herokuapp.com/profile/image/${email}`, {
+          fetch(`https://online-bank-of-bd-server-production.up.railway.app/profile/image/${email}`, {
             method: "put",
             headers: {
               "content-type": "application/json",
@@ -111,7 +111,7 @@ const Profile = () => {
       joined: date
     }
     // send to database
-    fetch(`https://bank-of-bd.herokuapp.com/profile/${email}`, {
+    fetch(`https://online-bank-of-bd-server-production.up.railway.app/profile/${email}`, {
       method: 'PUT',
       headers: {
         "content-type": "application/json",

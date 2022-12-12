@@ -58,7 +58,7 @@ const CreateAccount = () => {
     //         authemail: user.email,
     //     }
 
-    //     fetch('https://bank-of-bd.herokuapp.com/account', {
+    //     fetch('https://online-bank-of-bd-server-production.up.railway.app/account', {
     //         method: 'POST',
     //         headers: {
     //             'content-type': 'application/json'

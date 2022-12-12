@@ -64,7 +64,7 @@ const LoanReq = () => {
 
         // Approved Loan status
 
-        axios.put(`https://bank-of-bd.herokuapp.com/loanRequests/${id}`, loanUpdate)
+        axios.put(`https://online-bank-of-bd-server-production.up.railway.app/loanRequests/${id}`, loanUpdate)
             .then(res => {
                 toast.success(`${name}'s Loan Approved!`)
             })

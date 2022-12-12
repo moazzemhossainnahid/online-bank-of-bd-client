@@ -14,7 +14,7 @@ const Authentication = () => {
     const [profile ,setProfile]=useState(null)
 
     useEffect(()=>{
-        fetch(`https://bank-of-bd.herokuapp.com/profile/${user?.email}`)
+        fetch(`https://online-bank-of-bd-server-production.up.railway.app/profile/${user?.email}`)
         .then(res=>{
           if(!res.status===200){
             toast.error("Profile Not Found!")

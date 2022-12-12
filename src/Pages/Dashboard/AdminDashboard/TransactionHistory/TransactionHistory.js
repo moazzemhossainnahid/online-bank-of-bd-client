@@ -14,7 +14,7 @@ const TransactionHistory = () => {
 
     // const pageSize = 7;
 
-    const transaction = () => axios.get('https://bank-of-bd.herokuapp.com/statements');
+    const transaction = () => axios.get('https://online-bank-of-bd-server-production.up.railway.app/statements');
 
     const { isLoading, data } = useQuery(["transaction"], transaction);
 

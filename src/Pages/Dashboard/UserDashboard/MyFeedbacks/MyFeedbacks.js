@@ -13,7 +13,7 @@ const MyFeedbacks = () => {
 
     // console.log(email);
 
-    const feedback = () => axios.get(`https://bank-of-bd.herokuapp.com/feedbacks/${email}`);
+    const feedback = () => axios.get(`https://online-bank-of-bd-server-production.up.railway.app/feedbacks/${email}`);
 
     const { isLoading, data, refetch } = useQuery(["feedbacks"], feedback);
 

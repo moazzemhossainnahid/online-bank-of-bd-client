@@ -9,7 +9,7 @@ const AdminRoute = () => {
  
     useEffect(() => {
         const email = user?.email;
-        fetch(`https://bank-of-bd.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://online-bank-of-bd-server-production.up.railway.app/user/admin/${email}`, {
           method: "GET",
           headers: {
             "content-type": "application/json",

@@ -32,7 +32,7 @@ const Overview = () => {
 
 
     useEffect(() => {
-        fetch('https://bank-of-bd.herokuapp.com/statements')
+        fetch('https://online-bank-of-bd-server-production.up.railway.app/statements')
             .then(res => res.json())
             .then(data => setTransactions(data))
     }, [])

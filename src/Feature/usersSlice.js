@@ -5,7 +5,7 @@ import auth from "../firebase.init";
 
 export const fetchAllUsers = createAsyncThunk("users/fetchAllUsers", async () => {
     const [user] = useAuthState(auth);
-    const allUsersLoadByEmail = await axios.get(`https://bank-of-bd.herokuapp.com/accounts?email=${user?.email}`);
+    const allUsersLoadByEmail = await axios.get(`https://online-bank-of-bd-server-production.up.railway.app/accounts?email=${user?.email}`);
     return allUsersLoadByEmail.data;
 })
 

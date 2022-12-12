@@ -5,7 +5,7 @@ const UserDetails = ({ user, index }) => {
     const { _id, email, role } = user;
 
     const handleMakeAdmin = () => {
-        fetch(`https://bank-of-bd.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://online-bank-of-bd-server-production.up.railway.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -23,7 +23,7 @@ const UserDetails = ({ user, index }) => {
     }
 
     const handleRemoveAdmin = () => {
-        fetch(`https://bank-of-bd.herokuapp.com/user/admin/remove/${email}`, {
+        fetch(`https://online-bank-of-bd-server-production.up.railway.app/user/admin/remove/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -39,7 +39,7 @@ const UserDetails = ({ user, index }) => {
     }
 
     const handleRemoveUser = (id) => {
-        fetch(`https://bank-of-bd.herokuapp.com/user/${id}`, {
+        fetch(`https://online-bank-of-bd-server-production.up.railway.app/user/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

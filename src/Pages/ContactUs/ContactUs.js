@@ -53,7 +53,7 @@ const ContactUs = () => {
         }
         // console.log(userDetails)
 
-        fetch('https://bank-of-bd.herokuapp.com/contact', {
+        fetch('https://online-bank-of-bd-server-production.up.railway.app/contact', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -75,7 +75,7 @@ const ContactUs = () => {
     };
 
     return (
-        <section className='section max-w-7xl mx-auto bg-slate-200 py-20 px-5' id='contact'>
+        <section className='section max-w-7xl overflow-hidden mx-auto bg-slate-200 py-20 px-5' id='contact'>
 
             {/* title */}
 

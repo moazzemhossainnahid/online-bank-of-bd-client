@@ -13,7 +13,7 @@ const NoticeDropDown = ({notice}) => {
         const prevEmail = notice?.readUsers;
         const newEmail = user?.email
         const readUsers=[ ...prevEmail, newEmail]
-        const url = `https://bank-of-bd.herokuapp.com/notice/read/${notice?._id}`;
+        const url = `https://online-bank-of-bd-server-production.up.railway.app/notice/read/${notice?._id}`;
         fetch(url,{
             method:"PATCH",
             headers:{

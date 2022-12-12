@@ -7,7 +7,7 @@ const BlogsRow = ({blog,index,setRefresh,refresh}) => {
     const handleDeleteBlog=(id)=>{
         const confirm =window.confirm("Are You Sure Delete This Blog!")
         if(confirm){
-            const url = `https://bank-of-bd.herokuapp.com/blog/${id}`
+            const url = `https://online-bank-of-bd-server-production.up.railway.app/blog/${id}`
             fetch(url,{
                 method:"DELETE"
             }).then(res=>res.json()).then(result=>{

@@ -73,7 +73,7 @@ const ApplicationPreview = ({ currentStep, steps }) => {
             confirmButtonText: 'Yes, Submit it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch('https://bank-of-bd.herokuapp.com/account', {
+                fetch('https://online-bank-of-bd-server-production.up.railway.app/account', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

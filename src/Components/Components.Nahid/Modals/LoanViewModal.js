@@ -11,7 +11,7 @@ const LoanViewModal = ({ viewLoan }) => {
     // console.log(loan?.userEmail);
 
     // const handleDelete = () =>{
-    //     fetch(`https://bank-of-bd.herokuapp.com/acc/${AccNo}`, {
+    //     fetch(`https://online-bank-of-bd-server-production.up.railway.app/acc/${AccNo}`, {
     //         method: 'PUT',
     //         headers: {
     //             'content-type': 'application/json',

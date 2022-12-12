@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchAllAccounts = createAsyncThunk('allAccunts/fetchAllAccounts', async () => {    
-    const allAccounts = await axios.get('https://bank-of-bd.herokuapp.com/allAccounts');
+    const allAccounts = await axios.get('https://online-bank-of-bd-server-production.up.railway.app/allAccounts');
     return allAccounts.data;
 })
 

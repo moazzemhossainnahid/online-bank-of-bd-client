@@ -20,7 +20,7 @@ const TransferMoneyModal = ({ transferMoney, setRefreshAccount, refreshAccount }
 
     const handleAccountBlur = (e) => {
         const tccAcc = e.target.value;
-        axios.get(`https://bank-of-bd.herokuapp.com/accountno?accountno=${tccAcc}`)
+        axios.get(`https://online-bank-of-bd-server-production.up.railway.app/accountno?accountno=${tccAcc}`)
             .then(function (data) {
                 setTransAcc(data?.data);
             })
@@ -114,7 +114,7 @@ const TransferMoneyModal = ({ transferMoney, setRefreshAccount, refreshAccount }
         else {
 
             // Sender
-            const url = `https://bank-of-bd.herokuapp.com/account/${_id}`;
+            const url = `https://online-bank-of-bd-server-production.up.railway.app/account/${_id}`;
 
             fetch(url, {
                 method: 'PUT',
@@ -133,7 +133,7 @@ const TransferMoneyModal = ({ transferMoney, setRefreshAccount, refreshAccount }
             // Receiver        
             const addBalance = { transferAmount };
 
-            const senderUrl = `https://bank-of-bd.herokuapp.com/accountno/${transferAccountNo}`;
+            const senderUrl = `https://online-bank-of-bd-server-production.up.railway.app/accountno/${transferAccountNo}`;
 
             fetch(senderUrl, {
                 method: 'PUT',
@@ -157,7 +157,7 @@ const TransferMoneyModal = ({ transferMoney, setRefreshAccount, refreshAccount }
 
                 // console.log(mainAcc?.balance);
                 // console.log(interest);
-                const mainurl = `https://bank-of-bd.herokuapp.com/mainaccount/${mainAcc?._id}`;
+                const mainurl = `https://online-bank-of-bd-server-production.up.railway.app/mainaccount/${mainAcc?._id}`;
                 fetch(mainurl, {
                     method: 'PUT',
                     headers: {
@@ -192,7 +192,7 @@ const TransferMoneyModal = ({ transferMoney, setRefreshAccount, refreshAccount }
                 image: image
             }
 
-            fetch('https://bank-of-bd.herokuapp.com/statement', {
+            fetch('https://online-bank-of-bd-server-production.up.railway.app/statement', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -220,7 +220,7 @@ const TransferMoneyModal = ({ transferMoney, setRefreshAccount, refreshAccount }
             }
 
 
-            fetch('https://bank-of-bd.herokuapp.com/statement', {
+            fetch('https://online-bank-of-bd-server-production.up.railway.app/statement', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

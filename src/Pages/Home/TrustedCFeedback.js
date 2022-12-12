@@ -38,7 +38,7 @@ const TrustedCFeedback = () => {
   const [hoverValue, setHoverValue] = useState(undefined);
   const stars = Array(5).fill(0)
   
-  const feedback = () => axios.get('https://bank-of-bd.herokuapp.com/feedbacks');
+  const feedback = () => axios.get('https://online-bank-of-bd-server-production.up.railway.app/feedbacks');
 
   const {isLoading, data , refetch} = useQuery(["feedbacks"], feedback);
 
@@ -93,7 +93,7 @@ const TrustedCFeedback = () => {
     }
     // console.log(feedbackDetails)
 
-    fetch('https://bank-of-bd.herokuapp.com/feedback', {
+    fetch('https://online-bank-of-bd-server-production.up.railway.app/feedback', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

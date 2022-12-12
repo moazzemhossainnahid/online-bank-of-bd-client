@@ -17,7 +17,7 @@ const MyFeedbackDetails = ({ feedback, index, refetch }) => {
             confirmButtonText: 'Yes, Update it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://bank-of-bd.herokuapp.com/feedback/${id}`, {
+                fetch(`https://online-bank-of-bd-server-production.up.railway.app/feedback/${id}`, {
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json'
@@ -53,7 +53,7 @@ const MyFeedbackDetails = ({ feedback, index, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://bank-of-bd.herokuapp.com/feedback/${id}`, {
+                fetch(`https://online-bank-of-bd-server-production.up.railway.app/feedback/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'content-type': 'application/json'

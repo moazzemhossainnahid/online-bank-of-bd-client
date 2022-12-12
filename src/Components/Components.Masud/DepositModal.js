@@ -37,7 +37,7 @@ const DepositModal = ({ deposit, refresh, setRefresh }) => {
                 toast.error("You Connot Deposit Less Than $5")
             )
         } else {
-            const url = `https://bank-of-bd.herokuapp.com/account/${_id}`;
+            const url = `https://online-bank-of-bd-server-production.up.railway.app/account/${_id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -67,7 +67,7 @@ const DepositModal = ({ deposit, refresh, setRefresh }) => {
                 image: image
             }
 
-            fetch('https://bank-of-bd.herokuapp.com/statement', {
+            fetch('https://online-bank-of-bd-server-production.up.railway.app/statement', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

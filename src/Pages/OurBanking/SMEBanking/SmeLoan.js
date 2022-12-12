@@ -27,7 +27,7 @@ const SmeLoan = () => {
 
 
   useEffect(() => {
-    const url = `https://bank-of-bd.herokuapp.com/smeBanking/${loanId}`
+    const url = `https://online-bank-of-bd-server-production.up.railway.app/smeBanking/${loanId}`
 
     fetch(url)
       .then(res => res.json())
@@ -77,7 +77,7 @@ const SmeLoan = () => {
 
     // Post Loan to the request
 
-    axios.post('https://bank-of-bd.herokuapp.com/applyLoan', applyLoan)
+    axios.post('https://online-bank-of-bd-server-production.up.railway.app/applyLoan', applyLoan)
       .then((res) => {
         // console.log(res);
         navigate("/loanApplicationSuccess")

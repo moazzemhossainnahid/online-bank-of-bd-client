@@ -7,7 +7,7 @@ const useProfile = (email) => {
     // const email = user?.email;
 
     useEffect(() => {
-        fetch(`https://bank-of-bd.herokuapp.com/profile/${email}`)
+        fetch(`https://online-bank-of-bd-server-production.up.railway.app/profile/${email}`)
         .then(res => res.json())
         .then(data => setProfile(data))
     }, [email]);

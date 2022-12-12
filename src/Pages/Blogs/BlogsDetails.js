@@ -19,7 +19,7 @@ const BlogsDetails = () => {
     const [comments,setComments]=useState(null);
     const date = new Date().toLocaleString()
     useEffect(()=>{
-        const url= `https://bank-of-bd.herokuapp.com/blog/${id}`
+        const url= `https://online-bank-of-bd-server-production.up.railway.app/blog/${id}`
         fetch(url).then(res=>res.json()).then(data=>{
             setblog(data)
             setSpinner(false)
@@ -41,7 +41,7 @@ const BlogsDetails = () => {
         const prevComment = blog?.comment;
         const commentDate = date;
         const userComment = [...prevComment,{comment, userEmail,userName,userImage,commentDate}];
-        const url = `https://bank-of-bd.herokuapp.com/blog/comment/${id}`;
+        const url = `https://online-bank-of-bd-server-production.up.railway.app/blog/comment/${id}`;
         fetch(url,{
             method:"PATCH",
             headers:{

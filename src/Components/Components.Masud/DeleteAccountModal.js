@@ -6,7 +6,7 @@ const DeleteAccountModal = ({deleteAccount, refetch}) => {
     const {name, AccNo, balance, _id} = deleteAccount;
 
     const handleDelete = id =>{
-        const url = `https://bank-of-bd.herokuapp.com/account/${id}`;
+        const url = `https://online-bank-of-bd-server-production.up.railway.app/account/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

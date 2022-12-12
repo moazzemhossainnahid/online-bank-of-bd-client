@@ -12,7 +12,7 @@ const RequireAccount = ({ children }) => {
     const [accountLoading,setAccountLoading]=useState(true);
     useEffect(()=>{
         setAccountLoading(true);
-        fetch(`https://bank-of-bd.herokuapp.com/accounts?email=${user?.email}`)
+        fetch(`https://online-bank-of-bd-server-production.up.railway.app/accounts?email=${user?.email}`)
         .then(res=>{
             if(res.status=== 200){
                 return res.json()

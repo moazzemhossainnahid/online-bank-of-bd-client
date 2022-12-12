@@ -37,7 +37,7 @@ const Profile = () => {
                     }
 
                     // send to database
-                    fetch(`https://bank-of-bd.herokuapp.com/profile/${email}`, {
+                    fetch(`https://online-bank-of-bd-server-production.up.railway.app/profile/${email}`, {
                         method: 'PUT',
                         headers: {
                             "content-type": "application/json",

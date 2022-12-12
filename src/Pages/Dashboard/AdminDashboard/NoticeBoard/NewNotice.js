@@ -14,7 +14,7 @@ const NewNotice = ({setModal}) => {
             message:data.message,
             noticeDate: date
         };
-        const url = `https://bank-of-bd.herokuapp.com/notice`;
+        const url = `https://online-bank-of-bd-server-production.up.railway.app/notice`;
         fetch(url,{
             method:"POST",
             headers:{

@@ -9,7 +9,7 @@ const ManageUsers = () => {
     const [users, setUsers] = useState([]);
 
     useEffect( () => {
-        fetch('https://bank-of-bd.herokuapp.com/users')
+        fetch('https://online-bank-of-bd-server-production.up.railway.app/users')
         .then(res => res.json())
         .then(data => setUsers(data))
     }, [users]);
